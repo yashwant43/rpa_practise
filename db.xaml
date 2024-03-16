@@ -96,11 +96,16 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="353.6,100" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=exceldb;dbq=F:\ONEDRIVE\DOCUMENTS\UIPATH\PRACTISE\sampledatafoodsales.xlsx;defaultdir=F:\ONEDRIVE\DOCUMENTS\UIPATH\PRACTISE;driverid=1046;fil=excel 12.0;maxbuffersize=2048;pagetimeout=5" DatabaseConnection="[db_output]" />
-    <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Run query" ExistingDbConnection="[db_output]" sap:VirtualizedContainerService.HintSize="353.6,129.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="select">
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Run query" ExistingDbConnection="[db_output]" sap:VirtualizedContainerService.HintSize="353.6,129.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1">
       <ui:ExecuteQuery.Parameters>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:ExecuteQuery.Parameters>
+      <ui:ExecuteQuery.Sql>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ExecuteQuery.Sql>
     </ui:ExecuteQuery>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;excel db is configured&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;excel db is is configured&quot;]" />
   </Sequence>
 </Activity>
