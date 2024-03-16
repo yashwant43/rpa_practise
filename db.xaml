@@ -106,6 +106,6 @@
         </InArgument>
       </ui:ExecuteQuery.Sql>
     </ui:ExecuteQuery>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;excel db is is configured&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;excel db is is is configured&quot;]" />
   </Sequence>
 </Activity>
