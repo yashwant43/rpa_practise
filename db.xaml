@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="db" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1524,816.8" sap2010:WorkflowViewState.IdRef="db_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="db" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1168,816.8" sap2010:WorkflowViewState.IdRef="db_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -86,7 +86,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="db" sap:VirtualizedContainerService.HintSize="416,301.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="db" sap:VirtualizedContainerService.HintSize="416,484" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_output" />
     </Sequence.Variables>
@@ -96,10 +96,11 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="353.6,100" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=exceldb;dbq=F:\ONEDRIVE\DOCUMENTS\UIPATH\PRACTISE\sampledatafoodsales.xlsx;defaultdir=F:\ONEDRIVE\DOCUMENTS\UIPATH\PRACTISE;driverid=1046;fil=excel 12.0;maxbuffersize=2048;pagetimeout=5" DatabaseConnection="[db_output]" />
-    <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Run query" ExistingDbConnection="[db_output]" sap:VirtualizedContainerService.HintSize="353.6,112.8" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="select">
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Run query" ExistingDbConnection="[db_output]" sap:VirtualizedContainerService.HintSize="353.6,129.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="select">
       <ui:ExecuteQuery.Parameters>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:ExecuteQuery.Parameters>
     </ui:ExecuteQuery>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;excel db is configured&quot;]" />
   </Sequence>
 </Activity>
