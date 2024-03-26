@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="UiAutomation" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1524,1606.4" sap2010:WorkflowViewState.IdRef="UiAutomation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="UiAutomation" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848,1455.2" sap2010:WorkflowViewState.IdRef="UiAutomation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -110,39 +110,27 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UiAutomation" sap:VirtualizedContainerService.HintSize="608,1541.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UiAutomation" sap:VirtualizedContainerService.HintSize="608,1390.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_browername">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://acme-test.uipath.com/login</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://acme-test.uipath.com/login" Name="str_browername" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="545.6,1452.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3517ff3d-b4d1-458e-a687-10231fc9b758" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="545.6,1301.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3517ff3d-b4d1-458e-a687-10231fc9b758" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Login " sap:VirtualizedContainerService.HintSize="512,1212.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Login " sap:VirtualizedContainerService.HintSize="512,1061.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Default="yashwantkandregula@gmail.com" Name="In_email" />
-              <Variable x:TypeArguments="ss:SecureString" Name="str_pass">
-                <Variable.Default>
-                  <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="new System.net.NetworkCredential(&quot;&quot;,&quot;pa68tl888&quot;).SecurePassword" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="ss:SecureString" Default="[new System.net.NetworkCredential(&quot;&quot;,&quot;pa68tl888&quot;).SecurePassword]" Name="str_pass" />
               <Variable x:TypeArguments="x:String" Name="str_loginflag" />
-              <Variable x:TypeArguments="x:Double" Name="int_delay_webpage">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Double" Value="2" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:Double" Default="2" Name="int_delay_webpage" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -154,7 +142,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" CvElementArea="442, 462, 513, 39" CvType="InputBox" DesignTimeRectangle="444, 463, 509, 35" DesignTimeScaleFactor="1.0499999523162842" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ' aaname='Email:' /&gt;" Guid="61df9387-4dce-405f-af8c-29a13d7e593b" InformativeScreenshot="db534c816f99550f83e3933bc241c564.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CvTextArea="442, 439, 46, 14" CvTextArgument="Email:" CvType="Text" DesignTimeRectangle="444, 436, 44, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email:' check:innerText='Email:' /&gt;" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -165,14 +153,14 @@
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" CvTextArea="361, 196, 185, 32" CvType="AnyWordGroup" DesignTimeRectangle="361, 193, 1198, 52" DesignTimeScaleFactor="1.0499999523162842" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='page-header' /&gt;" Guid="1a5961b7-5e0f-418e-826a-65f8f98d462d" InformativeScreenshot="590f738fa4ef5111aba316cce1e7a00f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CvTextArea="361, 196, 185, 32" CvTextArgument="Dashboard" CvType="Text" DesignTimeRectangle="362, 196, 184, 32" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
-            <If Condition="[str_loginflag.Contains(&quot;Dashboard&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,670.4" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[str_loginflag.Contains(&quot;Dashboard&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,519.2" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,13 +178,12 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,253.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,102.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;login failed&quot;]" />
                 </Sequence>
               </If.Else>
             </If>

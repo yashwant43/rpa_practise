@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="array" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1228,2540" sap2010:WorkflowViewState.IdRef="array_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="array" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848,2540" sap2010:WorkflowViewState.IdRef="array_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -85,6 +85,12 @@
       <Variable x:TypeArguments="s:Int32[]" Name="arr_1" />
       <Variable x:TypeArguments="s:Int32[]" Name="arr_2" />
       <Variable x:TypeArguments="s:Int32[]" Name="arr_3" />
+      <Variable x:TypeArguments="s:Int32[]" Name="arr_4">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="s:Int32[]" ExpressionText="new string() {}" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="variable1" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -147,6 +153,6 @@
     </Assign>
     <ui:LogMessage DisplayName="Print the array" sap:VirtualizedContainerService.HintSize="449.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[string.join(&quot;,&quot;,arr_1)]" />
     <ui:LogMessage DisplayName="check if two arrays are equal or not" sap:VirtualizedContainerService.HintSize="449.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[Array.Equals(arr_1,arr_2)]" />
-    <ui:LogMessage DisplayName="remove an element in the array" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[arr_1.Where(Function(x) x &lt;&gt; 5).ToArray()]" />
+    <ui:LogMessage DisplayName="remove an element in the array" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[arr_1.Where(Function(x) x &lt;&gt; 5).ToArray()]" />
   </Sequence>
 </Activity>

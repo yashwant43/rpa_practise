@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="excel" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1524,3134.4" sap2010:WorkflowViewState.IdRef="excel_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="excel" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="953.6,3134.4" sap2010:WorkflowViewState.IdRef="excel_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -161,14 +161,10 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;in_dt.DefaultView.Sort=(&quot;City ASC&quot;)&#xD;&#xA;out_dt=in_dt.DefaultView.ToTable&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="353.6,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xA;in_dt.DefaultView.Sort=(&quot;City ASC&quot;)&#xA;out_dt=in_dt.DefaultView.ToTable&#xA;&#xA;&#x9;&#xA;&#x9;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="353.6,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
             <ui:InvokeCode.Arguments>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt">
-                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_filtered" />
-              </InArgument>
-              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt">
-                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_sorted" />
-              </OutArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt">[dt_filtered]</InArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt">[dt_sorted]</OutArgument>
             </ui:InvokeCode.Arguments>
           </ui:InvokeCode>
         </Sequence>
@@ -180,7 +176,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:LogMessage DisplayName="Count no of rows" sap:VirtualizedContainerService.HintSize="496,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[dt_filtered.RowCount.ToString]">
+    <ui:LogMessage DisplayName="Count no of rows" sap:VirtualizedContainerService.HintSize="496,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[dt_filtered.Rows.count]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -332,12 +328,8 @@
         <InvokeMethod.TargetObject>
           <InArgument x:TypeArguments="sd:DataRowCollection">[dt_food.rows]</InArgument>
         </InvokeMethod.TargetObject>
-        <InArgument x:TypeArguments="sd:DataRow">
-          <VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="dt_newrow" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32">
-          <Literal x:TypeArguments="x:Int32" Value="3" />
-        </InArgument>
+        <InArgument x:TypeArguments="sd:DataRow">[dt_newrow]</InArgument>
+        <InArgument x:TypeArguments="x:Int32">3</InArgument>
       </InvokeMethod>
       <ui:OutputDataTable DataTable="[dt_food]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="433.6,120.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[dt_outputinsert]" />
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[dt_outputinsert]" />
